@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+<modules>
+    <Progento_Checkoutpromocodes>
+    <version>0.1.0</version>
+    </Progento_Checkoutpromocodes>
+</modules>
+
+
+<frontend>
+    <routers>
+		<checkout>
+			<use>standard</use>
+			<args>
+				<modules>
+					<Progento_Checkoutcontroller before="Mage_Checkout">Progento_Checkoutpromocodes</Progento_Checkoutcontroller>
+				</modules>
+			</args>
+		</checkout>
+	</routers>
+	<layout>
+		<updates>
+			<progento_checkoutpromocodes module="Checkoutpromocodes">
+				<file>checkoutpromocodes.xml</file>
+			</progento_checkoutpromocodes>
+		</updates>
+	</layout>
+</frontend>
+
+</config>
